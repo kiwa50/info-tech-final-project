@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Suit up!</title>
+    <style>
+        #surface {
+            margin: 20px;
+        }
+        #helmet {
+            position: relative;
+            z-index: 2;
+            height: 500px;
+        }
+        #user-photo {
+            position: relative;
+            z-index: 1;
+            top: -373px;
+            left: 84px;
+            object-fit: cover;
+            height: 321px;
+            width: 362px;
+            border-radius: 34%;
+        }
+    </style>
+</head>
+<body>
+    <label for="selfie">Take a selfie:</label>
+    <input type="file" id="selfie" name="selfie" accept="image/*" capture="user" />
+
+    <div id="surface">
+        <!-- helmet png source: https://www.cleanpng.com/png-portable-network-graphics-vector-graphics-clip-art-7163659/ -->
+        <img id="helmet" src="img/helmet.png" alt="A transparent image of a space helmet">
+        <img id="user-photo" src="#" alt="User's uploaded photo">
+    </div>
+
+    <script>
+        var film = document.getElementById("user-photo");
+        film.style.display = "none";
+        selfie.onchange = evt => {
+          const [file] = selfie.files
+          if (file) {
+             film.src = URL.createObjectURL(file);
+             film.style.display = "block";
+          }
+        }
+    </script>
+</html>
