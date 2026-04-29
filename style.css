@@ -1,63 +1,83 @@
- body {
-            background-image: url("img/night_sky.png");
-        }
-
-        .menu-item {
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 35px;
-            text-align: center;
-        }
-
-        .menu-item a {
-            color: #F0FDFF;
-            text-decoration: none;
-            font-family: "Silkscreen", "Courier Code", "Courier New", "Courier", monospace;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        #content {
-            margin: 0px auto 100px auto;
-            width: 800px;
-            color: #F0FDFF;
-            font-size: 1.2em;
-            font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
-            font-weight: 400;
-            font-style: normal;
-            line-height: 1.5;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Silkscreen", "Courier Code", "Courier New", "Courier", monospace;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24;
-            font-size: 40px;
-        }
-        img { max-width: 100%; height: auto; }
-        .tall-image [
-           width: auto;
-           height: 500px;
-     
+/* 
+    Note that we should validate our CSS with 
+    https://jigsaw.w3.org/css-validator 
+*/
+body {
+    background-image: url("img/night_sky.png");
 }
-        .history-image {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 20px 0px;
-        }
 
-        .caption {
-            font-size: 0.85em;
-            margin-top: -10px;
-        }
-    </style>
+.menu-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 35px;
+    text-align: center;
+}
 
+.menu-item a {
+    color: #f0fdff;
+    text-decoration: none;
+    font-family: "Silkscreen", "Courier Code", "Courier New", "Courier",
+        monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#content {
+    margin: 0px auto 100px auto;
+    width: 800px;
+    color: #f0fdff;
+    font-size: 1.2em;
+    font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Silkscreen", "Courier Code", "Courier New", "Courier",
+        monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-size: 40px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.tall-image {
+    height: 500px;
+    width: auto;
+}
+.history-image {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 20px 0px;
+}
+
+.caption {
+    font-size: 0.85em;
+    margin-top: -10px;
+}
+
+/* Photo of the Day CSS */ 
+#photo-of-the-day-photo {
+    text-align:center;
+    background-color: #333;
+    padding: 10px 0px 10px 0px;
+}
+
+#photo-of-the-day-photo img {
+    height: 380px;
+}
+.photo-caption {
+    background-color: #333;
+    padding: 0px 13px 13px 13px;
+}
+.photo-caption figcaption {
+    line-height: 1.4;
+}

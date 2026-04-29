@@ -11,66 +11,8 @@
 
         <!-- icon_names MUST be in alphabetical order! -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=female,globe_asia,history_edu,home,pets,planet,school" />
-        <style>
-            /* 
-                Note that we should validate our CSS with 
-                https://jigsaw.w3.org/css-validator 
-            */
-
-            body {
-                 /*background-color: #00008B; */
-                background-image: url("img/night_sky.png");
-                /* I can't get the cursor to be a PNG icon! */
-                /*cursor: url("https://cdn-icons-png.flaticon.com/256/7944/7944613.png"), pointer;*/
-            }
-            .menu-item {
-                display: inline-block;
-                vertical-align:top;
-                margin-right: 35px;
-                text-align: center;
-            }
-            .menu-item a {
-                color: #F0FDFF;
-                text-decoration: none;
-                font-family: "Silkscreen", "Courier Code", "Courier New", "Courier", monospace;
-                font-weight: 400;
-                font-style: normal;
-            }
-
-            #content {
-                margin: 0px auto 100px auto;
-                width: 800px;
-                color: #F0FDFF;
-                font-size: 1.2em;
-                font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
-                font-weight: 400;
-                font-style: normal;
-            }
-            h1, h2, h3, h4, h5, h6 {
-                font-family: "Silkscreen", "Courier Code", "Courier New", "Courier", monospace;
-                font-weight: 400;
-                font-style: normal;
-            }
-
-            .material-symbols-outlined {
-                font-variation-settings:
-                    'FILL' 0,
-                    'wght' 400,
-                    'GRAD' 0,
-                    'opsz' 24;
-                font-size: 40px;
-            }
-            
-            #photo-of-the-day img {
-                height: 300px;
-            }
-            .photo-caption {
-                background-color: #333;
-            }
-            .photo-caption figcaption {
-                line-height: 1.4;
-            }
-        </style>
+     
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="content">
@@ -120,7 +62,7 @@
                 </div>
             </div>
             <h2>Photo of the Day</h2>
-            <div id="photo-of-the-day"></div>
+            <div id="photo-of-the-day-container"></div>
         </div>
         <script>
             async function getPhotoOfTheDay() {
@@ -140,11 +82,11 @@
                 let mediaType = firstImage["media_type"];
                 let title = firstImage["title"];
                 
-                var htmlToWrite = "<img src="+url+">";
+                var htmlToWrite = "<div id='photo-of-the-day-photo'><img src="+url+"></div>";
                 htmlToWrite = htmlToWrite +"<div class='photo-caption'>";
                 htmlToWrite = htmlToWrite +"<h3 class='photo-title'>"+title+"</h3>";
                 htmlToWrite = htmlToWrite +"<figcaption>"+caption+"</figcaption></div>";
-                document.getElementById('photo-of-the-day').innerHTML = htmlToWrite;
+                document.getElementById('photo-of-the-day-container').innerHTML = htmlToWrite;
             }
             getPhotoOfTheDay();
         </script>
