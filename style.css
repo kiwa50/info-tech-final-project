@@ -1,1 +1,58 @@
+ body {
+            background-image: url("img/background-sky.png");
+        }
+
+        .menu-item {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 35px;
+            text-align: center;
+        }
+
+        .menu-item a {
+            color: #F0FDFF;
+            text-decoration: none;
+            font-family: "Silkscreen", "Courier Code", "Courier New", "Courier", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #content {
+            margin: 0px auto 100px auto;
+            width: 800px;
+            color: #F0FDFF;
+            font-size: 1.2em;
+            font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Silkscreen", "Courier Code", "Courier New", "Courier", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            font-size: 40px;
+        }
+
+        .history-image {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 20px 0px;
+        }
+
+        .caption {
+            font-size: 0.85em;
+            margin-top: -10px;
+        }
+    </style>
 
