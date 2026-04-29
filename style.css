@@ -43,7 +43,12 @@
             font-size: 40px;
         }
         img { max-width: 100%; height: auto; }
-        
+        .tall-image [
+           width: 100%;
+           max-width: 700px;
+           display: block;
+           margin: 20xpx 0px;
+}
         .history-image {
             width: 100%;
             max-width: 700px;
