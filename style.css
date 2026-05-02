@@ -14,7 +14,7 @@ body {
 }
 
 .menu-item a {
-    color: #f0fdff;
+    color: #f0fdff !important;
     text-decoration: none;
     font-family: "Silkscreen", "Courier Code", "Courier New", "Courier",
         monospace;
@@ -39,7 +39,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-style: normal;
 }
-
+a:link{
+    color: #8ACE00;
+}
+a:visited{
+    color:#FF46A2;
+}
+a:hover{
+    color: #B6D4F1;
+}
 .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
     font-size: 40px;
