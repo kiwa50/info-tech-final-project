@@ -60,8 +60,8 @@ img {
     height: 500px;
     width: auto;
 }
-.text-align: {
-    center;
+.center-media {
+    text-align: center;
 }
 .history-image {
     width: 100%;
