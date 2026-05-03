@@ -64,6 +64,7 @@
     <input type="text" id="weight">
     <button id="calculate" onclick="calculateMass()">Calculate</button>
     <h3>The Sun</h3>
+    <p id="sun-weight"></p>
 <p>
     First thing to know about the sun is that it's actually a star! It looks so big because we are so much closer to it than other stars, so much so that we can see it during the day. But don't look directly at it! Staring at the sun will hurt your eyes! So what exactly is a star? A star is a hot, glowing ball of gas.
 </p>
@@ -123,6 +124,7 @@ Venus is the hottest planet. It has a thick atmosphere full of the greenhouse ga
 <p>Our days here are about 24 hours as I'm sure you know, and our years are considered to be 365.25 days! What is the .25 you may ask? Well, it refers to the occasional leap year/leap day.</p>
 <hr>
 <h3>Mars</h3>
+<p id="mars-weight"></p>
 <iframe src="https://eyes.nasa.gov/apps/solar-system/#/mars?featured=false&detailPanel=false&logo=false&search=false&shareButton=false&menu=false&collapseSettingsOptions=true&hideFullScreenToggle=true" allowfullscreen ></iframe>
 <p>Mars is a cold desert world. The great inspiration of science fiction. The average temperature on Mars is minus 85 degrees Fahrenheit or minus 65 degrees Celsius. These are super-duper below the freezing point. It is half the size of Earth. Mars is sometimes called the Red Planet. It's red because of rusty iron in the ground.</p>
 <br>
@@ -135,6 +137,7 @@ Venus is the hottest planet. It has a thick atmosphere full of the greenhouse ga
 <p>Mars not only has a year thats twice as long as ours, but has twice as many moons! Mars' two moons have specific names, Phobos and Deimos.</p>
 <hr>
 <h3>Jupiter</h3>
+<p id="jupiter-weight"></p>
 <iframe src="https://eyes.nasa.gov/apps/solar-system/#/jupiter?featured=false&detailPanel=false&logo=false&search=false&shareButton=false&menu=false&collapseSettingsOptions=true&hideFullScreenToggle=true" allowfullscreen ></iframe>
 <p>Jupiter is huge! It's the biggest planet in the Solar System and o' so' very stormy. Its similar in many ways to a star in what it's made of, but never got big enough to become one! So a planet it remains. It is mostly made of hydrogen and helium and has a super duper thick atmosphere. It is covered in swirling multicolored stripes of gas clouds and has bigger storms that easily imagined like the one scientists call the Great Red Spot! The Great Red Spot has been around for hundreds of years. Can you imagine a storm that has been a storm the entire time youve been alive, your parents been alive, your gradparents and generations before?</p>
 <br>
@@ -144,12 +147,14 @@ Venus is the hottest planet. It has a thick atmosphere full of the greenhouse ga
 <p>Jupiter had the championship belt for the most moons for most of history. <a href="https://ssd.jpl.nasa.gov/sats/discovery.html">It has 95 moons.</a> More mass = more gravity to pull in moons! Many more moons may exist but they are not confirmed! But a historic moon-rivalry with Saturn nontheless.</p>
 <hr>
 <h3>Saturn</h3>
+<p id="saturn-weight"></p>
 <iframe src="https://eyes.nasa.gov/apps/solar-system/#/saturn?featured=false&detailPanel=false&logo=false&search=false&shareButton=false&menu=false&collapseSettingsOptions=true&hideFullScreenToggle=true" allowfullscreen ></iframe>
 <p>The rings we see are made of groups of tiny ringlets that surround Saturn. They're made of chunks of ice and rock. Like Jupiter, Saturn is mostly a ball of hydrogen and helium.</p>
 <p>Saturn has a thick atmosphere like Jupiter. It also has a lovely set of seven main rings with spaces between them. These rings are what Saturn is most known for. One day on Saturn goes by in just 10.7 hours.
 One year on Saturn is the same as 29 Earth years. As of March 2025, Saturn has also taken the championship belt from Jupiter for the most "confirmed" moons with <a href="https://science.nasa.gov/saturn/moons/">274.</a> Saturn's gravity has this kind of pull as a combination of factors between its distance from the Sun and its own size!(Even though its not as big as Jupiter) Historically, its the furthest planet from the sun spotted with just a person's eyes. No telescope! Though a telescope would help you very much.</p>
 <hr>
 <h3>Uranus</h3>
+<p id="uranus-weight"></p>
 <iframe src="https://eyes.nasa.gov/apps/solar-system/#/uranus?featured=false&detailPanel=false&logo=false&search=false&shareButton=false&menu=false&collapseSettingsOptions=true&hideFullScreenToggle=true" allowfullscreen ></iframe>
 <p>Uranus is made of water, methane, and ammonia fluids above a smaller solid rock center. It has lots of water, but unlike Earth it is uninhabitable and doesn't also have a solid surface! Its atmosphere is made of hydrogen and helium like Jupiter and Saturn, but it also has methane. Methane is actually what gives Uranus that beautiful blue color!. Uranus also has faint rings. The inner rings are narrow and dark. The outer rings are brightly colored and easier to see. Uranus, like Venus also has its own funky rotation. But while Venus rotates in the opposite direction to the other planets, Uranus uniquely rotates on its side!</p>
 <p>Uranus is surrounded by a set of 13 rings.  (Theyre just a bit faint!)
@@ -157,6 +162,7 @@ Uranus is an ice giant (instead of a gas giant like Jupiter!). It is mostly made
 It takes 84 Earth years to get ONE year on Uranus. That's a lifetime!</p>
 <hr>
 <h3>Neptune</h3>
+<p id="neptune-weight"></p>
 <iframe src="https://eyes.nasa.gov/apps/solar-system/#/neptune?featured=false&detailPanel=false&logo=false&search=false&shareButton=false&menu=false&collapseSettingsOptions=true&hideFullScreenToggle=true" allowfullscreen ></iframe>
 <p>Neptune is very dark, very cold, and verrrry windy. It's the last of the planets in our solar system, which means its the furthest planet from the Sun! Neptune is super similar to Uranus. It's made of a thick fog of water, ammonia, and methane over an Earth-sized solid center. Its atmosphere is made of hydrogen, helium, and methane. The methane gives Neptune the same blue color as Uranus. Neptune has six rings, but they're much harder to see than the other planets rings</p>
 <p>One day on Neptune is 16 hours long! One year on Neptune is 165 Earth years long! That's because of how amazingly far from the Sun Neptune is! That's the longest year we've ever heard of!</p>
@@ -174,9 +180,21 @@ It takes 84 Earth years to get ONE year on Uranus. That's a lifetime!</p>
         //run our code
 
             let mercuryWeight = earthWeight * 0.378;
-            document.getElementById("mercury-weight").innerHTML = "On Mercury you weigh " + mercuryWeight; 
+            document.getElementById("mercury-weight").innerHTML = "On Mercury you weigh " + mercuryWeight + "lbs";
             let venusWeight = earthWeight * 0.907;
-            document.getElementById("venus-weight").innerHTML = "On Venus you weigh " + venusWeight;
+            document.getElementById("venus-weight").innerHTML = "On Venus you weigh " + venusWeight + "lbs";
+            let marsWeight = earthWeight * 0.377;
+            document.getElementById("mars-weight").innerHTML = "On Mars you weigh " + marsWeight + "lbs";
+            let jupiterWeight = earthWeight * 2.528;
+            document.getElementById("jupiter-weight").innerHTML = "On Jupiter you weigh " + jupiterWeight + "lbs";
+            let saturnWeight = earthWeight * 1.064;
+            document.getElementById("saturn-weight").innerHTML = "On Saturn you weigh " + saturnWeight + "lbs";
+            let uranusWeight = earthWeight * 0.889;
+            document.getElementById("uranus-weight").innerHTML = "On Uranus you weigh " + uranusWeight + "lbs";
+            let neptuneWeight = earthWeight * 1.125;
+            document.getElementById("neptune-weight").innerHTML = "On Neptune you weigh " + neptuneWeight + "lbs";
+            let sunWeight = earthWeight * 27.072;
+            document.getElementById("sun-weight").innerHTML = "On The Sun you weigh " + sunWeight + "lbs";
         }
     }
 </script>
