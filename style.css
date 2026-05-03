@@ -92,3 +92,16 @@ img {
 .photo-caption figcaption {
     line-height: 1.4;
 }
+
+/* CSS for name.html page */
+#satellite-form-container {
+    margin-top: 35px;
+}
+#satellite-images-container {
+    margin-top: 40px;
+    text-align: center;
+}
+#satellite-images-container img {
+    margin: 2px;
+    width: 110px;
+}
