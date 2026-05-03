@@ -1,66 +1,72 @@
-<!-- Based on this code https://science.nasa.gov/specials/your-name-in-landsat/?mode=embed -->
-<html>
-<head>
-    <style>
-        #images {
-            margin-top: 20px;
-        }
-        #images img {
-            margin: 3px;
-            width: 150px;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Row Space Adventure -- Satellites</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet">
+
+    <!-- icon_names MUST be in alphabetical order! -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=female,globe_asia,history_edu,home,pets,planet,school" />
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label for="name">Enter name:</label>
-    <!-- <input type="text" id="name" name="name" onkeyup="displayImages()"> -->
-    <input type="text" id="name" name="name">
-    <button id="name-submit" onclick="displayImages()">Deploy satellites!</button>
-    <div id="images"></div>
-<script>
-    // c => 2
-    function asIndex(letter) {
-        return Number(letter.charCodeAt(0) - 96 - 1);
-    }
-    function getRandomIntInclusive(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-
-    // NASA has a different number of images for each letter. E.g. 5 As, 2 Bs, 3 Cs, etc.
-    // We'll have our code randomly select one.
-    const numberOfEachLetter = [
-        4, 1, 2, 1, 3, 1, 0, 1, 4, 2, 1, 3, 2, 2, 1, 1, 1, 3, 2, 1, 1, 3, 1, 2, 1, 1
-    ];
-    // An example image URL: 
-    // https://science.nasa.gov/specials/your-name-in-landsat/images/t_0.jpg
-    function getLetterImageUrl(letter) {
-        let howManyImagesOfThisLetterAreThere = numberOfEachLetter[asIndex(letter)];
-        let randomImgNumber = getRandomIntInclusive(0, howManyImagesOfThisLetterAreThere);
-        return "https://science.nasa.gov/specials/your-name-in-landsat/images/" + letter.toLowerCase() + "_" + randomImgNumber + ".jpg";
-    }
-
-    function makeArrayOfImgURLs(name) {
-        var imgUrls = [];
-        for (i = 0; i < name.length; i++) {
-            imgUrls.push(getLetterImageUrl(name[i]));
-        }
-        return imgUrls;
-    }
-
-    function displayImages() {
-        const imagesDiv = document.getElementById("images");
-        imagesDiv.innerHTML = "";
-        // make name lowercase and remove non-letters, since we don't have satellite images for 
-        // numbers of punctuation 
-        const userName = document.getElementById('name').value.toLowerCase().replace(/[^a-zA-Z]/g, "");
-        var imgUrls = makeArrayOfImgURLs(userName);
-        for (i = 0; i < imgUrls.length; i++) {
-            let thisImg = "<img src=" + imgUrls[i] + ">";
-            imagesDiv.innerHTML += thisImg;
-        }
-    }
-</script>
+    <div id="content">
+        <h1>Front Row Space Adventure</h1>
+        <div id="menu">
+            <div class="menu-item">
+                <a href="index.html">
+                    <span class="material-symbols-outlined">home</span>
+                    <br>
+                    Home
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="earth.html">
+                    <span class="material-symbols-outlined">globe_asia</span>
+                    <br>
+                    Earth
+                </a>
+            </div>
+             <div class="menu-item">
+                <a href="planets.html">
+                    <span class="material-symbols-outlined" style="text-shadow:4px 4px #000000;">planet</span>
+                    <br>
+                    Solar<br>System
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="women-in-space.html">
+                    <span class="material-symbols-outlined">female</span>
+                    <br>
+                    Women in<br>Space
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="animals.html">
+                    <span class="material-symbols-outlined">pets</span>
+                    <br>
+                    Animals<br>in Space
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="history.html">
+                    <span class="material-symbols-outlined">history_edu</span>
+                    <br>
+                    NASA<br>History
+                </a>
+            </div>
+        </div>
+        <div id="satellite-form-container">
+            <label for="name">Enter your name, cadet!:</label>
+            <input type="text" id="name" name="name">
+            <button id="name-submit" onclick="displayImages()">Deploy satellites!</button>
+            </div>
+        <div id="satellite-images-container"></div>
+    </div>
+    <script src="js/name.js"></script>
 </body>
 </html>
