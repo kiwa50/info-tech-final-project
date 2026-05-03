@@ -105,3 +105,35 @@ img {
     margin: 2px;
     width: 110px;
 }
+/* CSS for selfie.html */
+#selfie-form-container {
+    margin-top: 25px;
+    margin-left:10px;
+}
+#selfie-container {
+    z-index: 0;
+    height: 530px;
+    width: 544px;
+    margin: 20px auto 20px auto;
+    border-radius: 100px;
+    padding-top: 20px;
+    text-align:center;
+    background-color: #DDDDDD66;
+    
+}
+#selfie-helmet {
+    position: relative;
+    z-index: 2;
+    height: 500px;
+    width:500px;
+}
+#selfie-upload-by-user {
+    position: relative;
+    z-index: 1;
+    top: -373px;
+    left: 94px;
+    object-fit: cover;
+    height: 321px;
+    width: 358px;
+    border-radius: 34%;
+}
