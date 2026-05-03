@@ -1,0 +1,45 @@
+// Based on this code https://science.nasa.gov/specials/your-name-in-landsat/
+// c => 2
+function asIndex(letter) {
+    return Number(letter.charCodeAt(0) - 96 - 1);
+}
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// NASA has a different number of images for each letter. E.g. 5 As, 2 Bs, 3 Cs, etc.
+// We'll have our code randomly select one.
+const numberOfEachLetter = [
+    4, 1, 2, 1, 3, 1, 0, 1, 4, 2, 1, 3, 2, 2, 1, 1, 1, 3, 2, 1, 1, 3, 1, 2, 1, 1
+];
+// An example image URL: 
+// https://science.nasa.gov/specials/your-name-in-landsat/images/t_0.jpg
+function getLetterImageUrl(letter) {
+    let howManyImagesOfThisLetterAreThere = numberOfEachLetter[asIndex(letter)];
+    let randomImgNumber = getRandomIntInclusive(0, howManyImagesOfThisLetterAreThere);
+    return "https://science.nasa.gov/specials/your-name-in-landsat/images/" + letter.toLowerCase() + "_" + randomImgNumber + ".jpg";
+}
+
+function makeArrayOfImgURLs(name) {
+    var imgUrls = [];
+    for (i = 0; i < name.length; i++) {
+        imgUrls.push(getLetterImageUrl(name[i]));
+    }
+    return imgUrls;
+}
+
+function displayImages() {
+    const imagesDiv = document.getElementById("satellite-images-container");
+    // clear innerHTML of imagesDiv
+    imagesDiv.innerHTML = "";
+    // make name lowercase and remove non-letters, since we don't have satellite images for 
+    // numbers of punctuation 
+    const userName = document.getElementById('name').value.toLowerCase().replace(/[^a-zA-Z]/g, "");
+    var imgUrls = makeArrayOfImgURLs(userName);
+    for (i = 0; i < imgUrls.length; i++) {
+        let thisImg = "<img src=" + imgUrls[i] + ">";
+        imagesDiv.innerHTML += thisImg;
+    }
+}
