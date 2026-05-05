@@ -69,7 +69,23 @@
                 </p>
             <h2>Photo of the Day</h2>
             <div id="photo-of-the-day-container"></div>
+            
+            <h2>Let's suit up!</h2>
+            <p>
+                Ready to suit up and explore? Upload a selfie to see yourself as an astronaut.
+            </p>
+            <div id="selfie-form-container">
+                <label for="selfie">Take a selfie:</label>
+                <input type="file" id="selfie" name="selfie" accept="image/*" capture="user">
+            </div>
+
+            <div id="selfie-container">
+                <!-- helmet png source: https://www.cleanpng.com/png-portable-network-graphics-vector-graphics-clip-art-7163659/ -->
+                <img id="selfie-helmet" src="img/helmet.png" alt="A transparent image of a space helmet">
+                <img id="selfie-upload-by-user" src="#" alt="User's uploaded photo">
+            </div>
         </div>
         <script src="js/pod.js"></script>
+        <script src="js/selfie.js"></script>
     </body>
 </html>
