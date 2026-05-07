@@ -60,6 +60,10 @@ img {
     height: 500px;
     width: auto;
 }
+.videos {
+    height: 500px;
+    width: auto;
+}
 .copyright {
     color: #f0fdff;
     font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
