@@ -60,9 +60,9 @@ img {
     height: 500px;
     width: auto;
 }
-.videos {
-    height: 500px;
-    width: auto;
+.videos
+    height: 315;
+    width: 560;
 }
 .copyright {
     color: #f0fdff;
