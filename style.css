@@ -60,6 +60,10 @@ img {
     height: 500px;
     width: auto;
 }
+.wide-image {
+    height: auto;
+    width: 500px;
+}
 .copyright {
     color: #f0fdff;
     font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
