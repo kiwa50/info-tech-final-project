@@ -70,11 +70,11 @@ img {
     font-weight: 400;
 }
 .apa-reference {
-    padding-left: 36px;
-    text-indent: -36px;
     color: #f0fdff;
     font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
     font-weight: 400;
+    padding-left: 36px;
+    text-indent: -36px;
 }
 .table-image {
     height: 400px;
