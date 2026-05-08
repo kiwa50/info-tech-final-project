@@ -135,6 +135,9 @@ put it in a div with this class. */
     width:500px;
 }
 #selfie-upload-by-user {
+    /* When the page loads, we actually want to 
+    hide this element UNTIL user uploads an image */
+    display: none; 
     position: relative;
     z-index: 1;
     top: -373px;
