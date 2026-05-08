@@ -69,6 +69,10 @@ img {
     font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
     font-weight: 400;
 }
+.apa-reference {
+    padding-left: 36px
+    text-indent: -36px
+}
 .table-image {
     height: 400px;
     width: 300px;
