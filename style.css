@@ -65,6 +65,9 @@ img {
     font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
     font-weight: 400;
 }
+
+/* To center an image or iframe, 
+put it in a div with this class. */
 .center-media {
     text-align: center;
 }
