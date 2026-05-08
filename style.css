@@ -71,6 +71,10 @@ put it in a div with this class. */
 .center-media {
     text-align: center;
 }
+.youtube-embed {
+    width: 560px;
+    height: 315px;
+}
 .history-image {
     width: 100%;
     max-width: 700px;
