@@ -215,7 +215,7 @@ put it in a div with this class. */
 
     #menu {
         gap: 0px;
-        flex-wrap: wrap;
+        
     }
 
     .menu-item {
