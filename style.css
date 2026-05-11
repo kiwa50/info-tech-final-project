@@ -169,9 +169,9 @@ put it in a div with this class. */
 }
 
 /* Overwrite some styles for smartphones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 800px) {
     #content {
-        width: 100%;
+        width: 97%;
         font-size: 1em;
     }
     .menu-item {
