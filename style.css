@@ -2,15 +2,24 @@
     Note that we should validate our CSS with 
     https://jigsaw.w3.org/css-validator 
 */
+
 body {
     background-image: url("img/night_sky.png");
 }
 
+/* Navigation menu */
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+}
+
 .menu-item {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 58px;
     text-align: center;
+    width: 95px;
 }
 
 .menu-item a {
@@ -37,37 +46,46 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-style: normal;
 }
-a:link{
+
+a:link {
     color: #8ACE00;
 }
-a:visited{
-    color:#FF46A2;
+
+a:visited {
+    color: #FF46A2;
 }
-a:hover{
+
+a:hover {
     color: #B6D4F1;
 }
+
 .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
     font-size: 40px;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 .tall-image {
     height: 500px;
     width: auto;
 }
+
 .wide-image {
     height: auto;
     width: 500px;
 }
+
 .copyright {
     color: #f0fdff;
     font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
     font-weight: 400;
     text-align: center;
 }
+
 .byline {
     font-size: 0.9em;
     font-style: italic;
@@ -75,6 +93,7 @@ img {
     margin-bottom: 25px;
     color: #f0fdff;
 }
+
 .apa-reference {
     color: #f0fdff;
     font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
@@ -82,33 +101,39 @@ img {
     padding-left: 36px;
     text-indent: -36px;
 }
+
 .table-image {
     height: 400px;
     width: 300px;
 }
+
 /* To center an image or iframe, 
 put it in a div with this class. */
 .center-media {
     text-align: center;
 }
+
 .youtube-embed {
     width: 560px;
     height: 315px;
 }
+
 .history-image {
     width: 100%;
     max-width: 700px;
     display: block;
-    margin: 20px 0px;
+    margin: 20px auto;
 }
+
 .caption {
     font-size: 0.85em;
     margin-top: -10px;
+    text-align: center;
 }
 
 /* Photo of the Day CSS */ 
 #photo-of-the-day-photo {
-    text-align:center;
+    text-align: center;
     background-color: #333;
     padding: 10px 0px 10px 0px;
 }
@@ -116,10 +141,12 @@ put it in a div with this class. */
 #photo-of-the-day-photo img {
     height: 380px;
 }
+
 .photo-caption {
     background-color: #333;
     padding: 0px 13px 13px 13px;
 }
+
 .photo-caption figcaption {
     line-height: 1.4;
 }
@@ -128,19 +155,23 @@ put it in a div with this class. */
 #satellite-form-container {
     margin-top: 35px;
 }
+
 #satellite-images-container {
     margin-top: 40px;
     text-align: center;
 }
+
 #satellite-images-container img {
     margin: 2px;
     width: 110px;
 }
+
 /* CSS for selfie.html */
 #selfie-form-container {
     margin-top: 25px;
-    margin-left:10px;
+    margin-left: 10px;
 }
+
 #selfie-container {
     z-index: 0;
     height: 530px;
@@ -148,15 +179,17 @@ put it in a div with this class. */
     margin: 20px auto 20px auto;
     border-radius: 100px;
     padding-top: 20px;
-    text-align:center;
+    text-align: center;
     background-color: #DDDDDD66;
 }
+
 #selfie-helmet {
     position: relative;
     z-index: 2;
     height: 500px;
-    width:500px;
+    width: 500px;
 }
+
 #selfie-upload-by-user {
     /* When the page loads, we actually want to 
     hide this element UNTIL user uploads an image */
@@ -179,28 +212,40 @@ put it in a div with this class. */
         width: 97%;
         font-size: 1em;
     }
-    .menu-item {
-        margin-right: 5px;
+
+    #menu {
+        gap: 12px;
+        flex-wrap: wrap;
     }
+
+    .menu-item {
+        width: 70px;
+    }
+
     .menu-item a {
         font-size: 0.80em;
     }
+
     .material-symbols-outlined {
         font-size: 25px;
     }
+
     .youtube-embed {
         width: 100%;
         height: auto;
     }
+
     #selfie-container {
         width: 100%;
         height: 385px;
-        text-align:center;
+        text-align: center;
     }
+
     #selfie-helmet {
         width: 100%;
         height: 380px;
     }
+
     #selfie-upload-by-user {
         top: -77%;
         height: 271px;
