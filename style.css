@@ -219,6 +219,7 @@ put it in a div with this class. */
 
     .menu-item {
         width: 70px;
+        line-height: 1.1;
     }
 
     .menu-item a {
