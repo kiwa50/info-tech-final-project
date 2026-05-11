@@ -16,8 +16,7 @@ body {
 .menu-item a {
     color: #f0fdff !important;
     text-decoration: none;
-    font-family: "Silkscreen", "Courier Code", "Courier New", "Courier",
-        monospace;
+    font-family: "Silkscreen", ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
     font-weight: 400;
     font-style: normal;
 }
