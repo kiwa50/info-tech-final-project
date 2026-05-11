@@ -26,15 +26,14 @@ body {
     width: 800px;
     color: #f0fdff;
     font-size: 1.2em;
-    font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
+    font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
     font-weight: 400;
     font-style: normal;
     line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Silkscreen", "Courier Code", "Courier New", "Courier",
-        monospace;
+    font-family: "Silkscreen", ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
     font-weight: 400;
     font-style: normal;
 }
@@ -65,13 +64,13 @@ img {
 }
 .copyright {
     color: #f0fdff;
-    font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
+    font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
     font-weight: 400;
     text-align: center;
 }
 .apa-reference {
     color: #f0fdff;
-    font-family: "Play", "Courier Code", "Courier New", "Courier", monospace;
+    font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
     font-weight: 400;
     padding-left: 36px;
     text-indent: -36px;
