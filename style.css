@@ -68,6 +68,13 @@ img {
     font-weight: 400;
     text-align: center;
 }
+.byline {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 25px;
+    color: #f0fdff;
+}
 .apa-reference {
     color: #f0fdff;
     font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
