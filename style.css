@@ -214,7 +214,7 @@ put it in a div with this class. */
     }
 
     #menu {
-        gap: 12px;
+        gap: 0px;
         flex-wrap: wrap;
     }
 
@@ -223,7 +223,7 @@ put it in a div with this class. */
     }
 
     .menu-item a {
-        font-size: 0.80em;
+        font-size: 0.70em;
     }
 
     .material-symbols-outlined {
