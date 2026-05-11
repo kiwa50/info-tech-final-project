@@ -75,6 +75,13 @@ img {
     padding-left: 36px;
     text-indent: -36px;
 }
+.about-us {
+    color: #f0fdff;
+    font-family: "Play", "Courier Code", "Courier New", "Courier", ui-monospace, monospace;
+    font-weight: 400;
+    padding-left: 36px;
+    text-indent: -36px;
+}
 .table-image {
     height: 400px;
     width: 300px;
