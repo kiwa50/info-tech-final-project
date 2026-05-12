@@ -10,9 +10,8 @@ body {
 /* Navigation menu */
 #menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
-    gap: 35px;
     flex-wrap: nowrap;
     margin-bottom: 40px;
 }
@@ -216,8 +215,7 @@ put it in a div with this class. */
     }
 
     #menu {
-        gap: 0px;
-        
+        justify-content: space-between;
     }
 
     .menu-item {
