@@ -1,15 +1,32 @@
 async function getPhotoOfTheDay() {
     // Construct apiURL that we'll call
     let apiKey = "4CZ408mbxhHdSSfuaEfuCy0OCBSBfW9PGDhoWv5H";
-    let apiURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey + "&count=1";
+    let apiURL = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey + "&count=20";
+    // Call it!
     var response = await fetch_repeated(apiURL);
     var jsonData = await response.json();
-    // Get first (and only) image in response JSON
-    let firstImage = jsonData[0];
+
+    // Initialize a variable for later use
+    let imagetoUse = "";
+    // Loop through the 20 returned media elements until we get an
+    // image, as opposed to a video. 
+    for (let i = 0; i < jsonData.length; i++) {
+        if (jsonData[i]["media_type"] == "image") {
+            // now we know that this is an image.
+            // So set it to the imagetoUse variable
+            imagetoUse = jsonData[i];
+            // and break out of this loop!
+            break;
+        }
+        // If we somehow didn't get an image in our 20 media requests,
+        // re-call this function to try again.
+        getPhotoOfTheDay();
+    }
+
     // Set variables that we'll need
-    let caption = firstImage["explanation"];
-    let url = firstImage["url"]
-    let title = firstImage["title"];
+    let caption = imagetoUse["explanation"];
+    let url = imagetoUse["url"];
+    let title = imagetoUse["title"];
 
     // Construct a new <div> to HTML page with the photo and text
     let htmlToWrite = "<div id='photo-of-the-day-photo'><img src=" + url + "></div>";
