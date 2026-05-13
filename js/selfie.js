@@ -22,7 +22,7 @@ function onSelfieUpload() {
         // And finally we get to make the image element visible!
         filmElement.style.display = "block";
     } else {
-        console.log("A non-image was updated");
+        document.getElementById("selfie-error-message").innerHTML = "Please upload an image";
     }
 }
 
